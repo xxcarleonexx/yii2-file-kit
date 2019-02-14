@@ -129,7 +129,11 @@
             },
             showError: function(error){
                 if ($.fn.popover) {
-                    $container.find('.error-popover').attr('data-content', error).popover({html:true,trigger:"hover"});
+                    $container
+                        .find('.error-popover')
+                        .attr('data-content', error)
+                        .popover({html:true,trigger:"hover"})
+                        .popover("show");
                 }
                 $container.find('.upload-kit-input').addClass('error');
             },
