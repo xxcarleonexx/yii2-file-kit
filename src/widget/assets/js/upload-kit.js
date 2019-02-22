@@ -134,6 +134,10 @@
                         .attr('data-content', error)
                         .popover({html:true,trigger:"hover"})
                         .popover("show");
+                } else {
+                    $container
+                        .find('.error-popover')
+                        .text(error)
                 }
                 $container.find('.upload-kit-input').addClass('error');
             },
